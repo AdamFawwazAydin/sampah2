@@ -18,8 +18,10 @@ if not os.path.exists(MODEL_PATH):
 # ======================
 # LOAD MODEL
 # ======================
-def predict_dummy(img):
-    return "Organik"  # sementara untuk UI
+import streamlit as st
+from tensorflow.keras.models import load_model
+
+model = load_model("model_sampah.h5")  # atau model.keras
 
 # ======================
 # PREPROCESS
