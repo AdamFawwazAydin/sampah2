@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 import cv2
-from tensorflow.keras.models import load_model
 from PIL import Image
 import gdown
 import os
@@ -19,7 +18,8 @@ if not os.path.exists(MODEL_PATH):
 # ======================
 # LOAD MODEL
 # ======================
-model = load_model(MODEL_PATH, compile=False)
+def predict_dummy(img):
+    return "Organik"  # sementara untuk UI
 
 # ======================
 # PREPROCESS
